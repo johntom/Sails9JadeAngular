@@ -1,0 +1,43 @@
+!!! 5
+extends layout
+
+block body
+ div(ng-controller='navController', class='container')
+    h1
+    .navbar
+
+
+           .navbar-inner
+
+            .container-fluid
+
+                ul.nav
+                    li
+                     img.logo(src="http://sailsjs.org/images/sails-logo.jpg")
+                    li.active
+                        a(href='#') Home
+                    li
+                        a(href='#view1') View1
+                    li
+                        a(href='#view2') View2
+                            //                    li
+                            //                      a(href='/view2') /View2
+                            //                    li
+                            //                      a(href='view2') blk View2
+                div#userInfo.pull-right(data-access-level='{{ accessLevels.user }}')
+                    | Welcome&nbsp;
+                    strong {{ user.username }}&nbsp;
+
+    .container
+       //| this is the view
+       div(ng-view='ng-view')
+        .alert.alert-error(ng-bind="error",ng-show="error")
+    script(src='js/lib/jquery/jquery.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js')
+    //script(src='js/lib/angular/angular114.js')
+    //script(src='js/lib/angular/angular-resource.js')
+    script(src='js/lib/angular/angular-table.js')
+    script(type="text/javascript", src="/js/application.js")
+    script(type="text/javascript", src="/js/configuration-constants.js")
+    script(type="text/javascript", src="/js/controllers.js")

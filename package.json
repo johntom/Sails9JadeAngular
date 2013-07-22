@@ -1,0 +1,23 @@
+{
+    "name": "Sails9JadeAngular",
+    "private": true,
+    "version": "0.0.0",
+    "description": "A Sails9 application with Jade and Angular Partials",
+    "dependencies": {
+        "sails": "0.9.3",
+        "grunt": "0.4.1",
+        "sails-disk": "~0.9.0",
+        "ejs": "0.8.4",
+        "optimist": "0.3.4",
+		"jade":"*"
+		
+    },
+    "scripts": {
+        "start": "node app.js",
+        "debug": "node debug app.js"
+    },
+    "main": "app.js",
+    "repository": "",
+    "author": "",
+    "license": ""
+}
