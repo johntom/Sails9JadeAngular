@@ -26,7 +26,7 @@ angular.module('application', ['application.filters', 'application.services', 'a
 
         }).
       when('/view1', {templateUrl: 'partials/partial1',controller:'MainCtrl'}).
-      when('/view2', {templateUrl: 'partials/partial2',controller:'MainCtrl2'}).
+      when('/foodview', {templateUrl: 'partials/foodview',controller:'MainCtrl2'}).
     //  when('/remotepartial', {templateUrl: '/template/find/test'}).
       otherwise({templateUrl: 'error404'});
   }])

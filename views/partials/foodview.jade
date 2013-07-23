@@ -57,7 +57,10 @@ p
              a.btn.btn-success(ng-click='toggleForm()', ng-hide='isFormActive') Add One
              button(ng-click='toggleForm()', ng-show='isFormActive') Hide Form
 
-             form(ng-show='isFormActive',class="demoDetailPane")
+            form(ng-show='isFormActive',class="demoDetailPane")
+                h1.text-info Food Entry
+
+
                 hr
                 label(for='name') Name:
                 input(name='name', ng-model='editableFood.name')

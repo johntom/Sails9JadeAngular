@@ -25,14 +25,12 @@ module.exports.adapters = {
 
   // Persistent adapter for DEVELOPMENT ONLY
   // (data IS preserved when the server shuts down)
-  disk: {
-    module: 'sails-disk'
-  },
-//    disk: {
-//        module: 'sails-disk',
-//        filePath: './.tmp/dirty.db',
-//        inMemory: false
-//    },
+
+    disk: {
+        module: 'sails-disk',
+        filePath: './.tmp/dirty.db',
+        inMemory: false
+    },
 
   // MySQL is the world's most popular relational database.
   // Learn more: http://en.wikipedia.org/wiki/MySQL

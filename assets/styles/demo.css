@@ -8,7 +8,7 @@ body {
     margin: 0;
     vertical-align: top;
     height: 300px;
-    width: 100%;
+    width: 50%;
     border-bottom: 1px solid black;
     padding-right: 21px;
     padding-bottom: 1px;
@@ -18,8 +18,8 @@ body {
     float: left;
     border: 1px solid black;
     margin: 0;
-    width: 20%;
-    height: 70%;
+    width: 40%;
+    height: 50%;
     background-color: #87cefa;
     vertical-align: top;
 }
