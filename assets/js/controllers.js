@@ -42,10 +42,28 @@ Application.Controllers.controller('navController', ['$scope', function($scope){
 }]);
 
 
-Application.Controllers.controller('MainCtrl2', ['$scope', function($scope){
+Application.Controllers.controller('MainCtrl2', ['$rootScope', '$scope', 'Food', function($rootScope, $scope,Food){
     console.log(' MainCtrl2 js home ')
-    $scope.foo =[];
-    $scope.foo = [{'id':'booyah2'},{'id':'gahead2'},{'id':'bakobus2'}];
+    $scope.food = Food.query();
+
+    $scope.isFormActive = false;
+
+    $scope.toggleForm = function(){
+        if ($scope.isFormActive){
+            $scope.isFormActive = false;
+            return;
+        }
+
+        $scope.isFormActive = true;
+        $scope.editableFood = new Food();
+    };
+
+    $scope.addFood = function(){
+        $scope.editableFood.$save();
+        $scope.food.push($scope.editableFood);
+        $scope.toggleForm();
+    };
+    console.log('food ',$scope.food)
 
 
 }]);

@@ -36,17 +36,24 @@ module.exports.routes = {
     view: 'home/index'
     //  view: 'partials/home'
   } ,
-
-    '/partials/partial1': {
-    //    view: 'partials/partial1'
-        controller: 'foo',
-        action:'index'
-    },
-    '/:unknownRoute': {
-        controller: 'foo',
-        action:'index2'
-
-    }
+    '/partials/:file'           :
+    { controller : 'foo', action : 'partials'}
+//    '/partials/partial1': {
+//    //    view: 'partials/partial1'
+//        controller: 'foo',
+//        action:'index'
+//    } ,
+//    '/partials/partial2': {
+//        view: 'partials/partial2'
+//    } ,
+//    '/partials/home': {
+//        view: 'partials/home'
+//    },
+//    '/:unknownRoute': {
+//        controller: 'foo',
+//        action:'index2'
+//
+//    }
 //    'partials/:name':{
 //        controller: 'foo',
 //          action:'index2'

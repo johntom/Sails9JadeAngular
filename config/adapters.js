@@ -28,6 +28,11 @@ module.exports.adapters = {
   disk: {
     module: 'sails-disk'
   },
+//    disk: {
+//        module: 'sails-disk',
+//        filePath: './.tmp/dirty.db',
+//        inMemory: false
+//    },
 
   // MySQL is the world's most popular relational database.
   // Learn more: http://en.wikipedia.org/wiki/MySQL

@@ -14,7 +14,7 @@ Application.Directives = angular.module('application.directives', []);
 //Application.angulartable = angular.module('angular-table', []);
 
 
-angular.module('application', ['application.filters', 'application.services', 'application.directives', 'application.constants', 'application.controllers','angular-table']).
+angular.module('application', ['application.filters', 'application.services', 'application.directives', 'application.constants', 'application.controllers','ngResource','angular-table']).
 //angular.module('application', ['application.filters', 'application.services', 'application.directives', 'application.constants', 'application.controllers']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.
@@ -29,5 +29,9 @@ angular.module('application', ['application.filters', 'application.services', 'a
       when('/view2', {templateUrl: 'partials/partial2',controller:'MainCtrl2'}).
     //  when('/remotepartial', {templateUrl: '/template/find/test'}).
       otherwise({templateUrl: 'error404'});
-  }]);
+  }])
+    .factory('Food', ['$resource', function($resource){
+        return $resource('/food/:id', {id:'@id'}) }])
+
+;
 
