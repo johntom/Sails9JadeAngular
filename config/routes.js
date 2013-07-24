@@ -37,7 +37,7 @@ module.exports.routes = {
     //  view: 'partials/home'
   } ,
     '/partials/:file'           :
-    { controller : 'foo', action : 'partials'}
+    { controller : 'index', action : 'partials'}
 //    '/partials/partial1': {
 //    //    view: 'partials/partial1'
 //        controller: 'foo',
